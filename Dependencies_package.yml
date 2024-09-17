@@ -1,5 +1,5 @@
 ---
-- hosts: ec2_instances
+- hosts: webservers
   become: yes
   tasks:
     - name: Update all packages
