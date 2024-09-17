@@ -1,0 +1,19 @@
+---
+- hosts: ec2_instances
+  become: yes
+  tasks:
+    - name: Update all packages
+      apt:
+        update_cache: yes
+
+    - name: Install Python3 and pip
+      apt:
+        name:
+          - python3
+          - python3-pip
+        state: present
+
+    - name: Install virtualenv
+      pip:
+        name: virtualenv
+
