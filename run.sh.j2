@@ -1,6 +1,0 @@
-#!/bin/bash
-export INSTANCE_PATH="{{ instance_path }}"
-cd "{{ app_deployment_dir }}"
-source venv/bin/activate
-exec gunicorn -b 0
-
